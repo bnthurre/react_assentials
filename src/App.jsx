@@ -3,8 +3,8 @@ import Header from "./components/header/Header";
 import CoreConcept from "./components/CoreConcept";
 import TabButtons from "./components/TabButton";
 function App() {
-  const handleselect = () => {
-    console.log("clicked the button on there");
+  const handleselect = (selectedItem) => {
+    console.log(selectedItem);
   };
   return (
     <div>
@@ -26,10 +26,10 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButtons onselect={handleselect} label="Components"></TabButtons>
-            <TabButtons onselect={handleselect} label="JSX"></TabButtons>
-            <TabButtons onselect={handleselect} label="Props"></TabButtons>
-            <TabButtons onselect={handleselect} label="State"></TabButtons>
+            <TabButtons onselect={()=>handleselect('components')} label="Components"></TabButtons>
+            <TabButtons onselect={()=>handleselect('jsx')}label="JSX"></TabButtons>
+            <TabButtons onselect={()=>handleselect('prop')} label="Props"></TabButtons>
+            <TabButtons onselect={()=>handleselect('state')} label="State"></TabButtons>
           </menu>
         </section>
       </main>
