@@ -1,8 +1,6 @@
-export default function TabButtons({label}){
-    const handleClick =()=>{
-        console.log("clicked the button");
-    }
-    return <li><button onClick={handleClick}>{label}</button></li>
+export default function TabButtons({label, onselect}){
+  
+    return <li><button onClick={onselect}>{label}</button></li>
 
 }
 // //using destructring by children prob

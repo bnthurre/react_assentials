@@ -3,6 +3,9 @@ import Header from "./components/header/Header";
 import CoreConcept from "./components/CoreConcept";
 import TabButtons from "./components/TabButton";
 function App() {
+  const handleselect = () => {
+    console.log("clicked the button on there");
+  };
   return (
     <div>
       <Header />
@@ -15,21 +18,19 @@ function App() {
               description={CORE_CONCEPTS[0].description}
               image={CORE_CONCEPTS[0].image}
             />
-            <CoreConcept {...CORE_CONCEPTS[1]}/>
-            <CoreConcept {...CORE_CONCEPTS[2]}/>
-            <CoreConcept {...CORE_CONCEPTS[3]}/>
+            <CoreConcept {...CORE_CONCEPTS[1]} />
+            <CoreConcept {...CORE_CONCEPTS[2]} />
+            <CoreConcept {...CORE_CONCEPTS[3]} />
           </ul>
         </section>
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButtons label="Components"></TabButtons>
-            <TabButtons label="JSX"></TabButtons>
-            <TabButtons label="Props"></TabButtons>
-            <TabButtons label="State"></TabButtons>
-
+            <TabButtons onselect={handleselect} label="Components"></TabButtons>
+            <TabButtons onselect={handleselect} label="JSX"></TabButtons>
+            <TabButtons onselect={handleselect} label="Props"></TabButtons>
+            <TabButtons onselect={handleselect} label="State"></TabButtons>
           </menu>
-
         </section>
       </main>
     </div>
