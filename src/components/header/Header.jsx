@@ -1,4 +1,6 @@
-import reactImg from "../assets/reactc.png";
+import reactImg from "../../assets/reactc.png";
+import './Header.css'
+
 
 function getRamdon(max) {
     return Math.floor(Math.random() * (max + 1));
