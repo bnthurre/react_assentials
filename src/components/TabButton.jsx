@@ -1,6 +1,6 @@
-export default function TabButtons({label, onselect}){
+export default function TabButtons({label, onselect , isSelected}){
   
-    return <li><button onClick={onselect}>{label}</button></li>
+    return <li><button className={isSelected ? 'active' : undefined} onClick={onselect}>{label}</button></li>
 
 }
 // //using destructring by children prob
