@@ -4,8 +4,7 @@ import Section from "./Section";
 
 const CoreConcepts = () => {
   return (
-    <Section id="core-concepts">
-      <h2>Core concepts</h2>
+    <Section id="core-concepts" title={'Core Concepts'}>
       <ul>
         {CORE_CONCEPTS.map((item) => (
           <CoreConcept key={item.title} {...item} />
