@@ -57,33 +57,33 @@ export default function Examples() {
   );
 }
 
-{
-  /* {!selectedTopic && <p>please select a topic!</p>}
-      {selectedTopic && (
-        <div id="tab-content">
-          <h3>{EXAMPLES[selectedTopic].title}</h3>
-          <p>{EXAMPLES[selectedTopic].description}</p>
-          <pre>
-            <code>{EXAMPLES[selectedTopic].code}</code>
-          </pre>
-        </div>
-      )} */
-}
-{
-  /* alternative way */
-}
-{
-  /* {!selectedTopic ? <p>please select a topic!</p> : null}
-    {selectedTopic ? (
-      <div id="tab-content">
-        <h3>{EXAMPLES[selectedTopic].title}</h3>
-        <p>{EXAMPLES[selectedTopic].description}</p>
-        <pre>
-          <code>{EXAMPLES[selectedTopic].code}</code>
-        </pre>
-      </div>
-    ) : null} */
-}
+// {
+//   /* {!selectedTopic && <p>please select a topic!</p>}
+//       {selectedTopic && (
+//         <div id="tab-content">
+//           <h3>{EXAMPLES[selectedTopic].title}</h3>
+//           <p>{EXAMPLES[selectedTopic].description}</p>
+//           <pre>
+//             <code>{EXAMPLES[selectedTopic].code}</code>
+//           </pre>
+//         </div>
+//       )} */
+// }
+// {
+//   /* alternative way */
+// }
+// {
+//   /* {!selectedTopic ? <p>please select a topic!</p> : null}
+//     {selectedTopic ? (
+//       <div id="tab-content">
+//         <h3>{EXAMPLES[selectedTopic].title}</h3>
+//         <p>{EXAMPLES[selectedTopic].description}</p>
+//         <pre>
+//           <code>{EXAMPLES[selectedTopic].code}</code>
+//         </pre>
+//       </div>
+//     ) : null} */
+// }
 
 // let tabcontent = <p>please select a topic!</p>;
 // if (selectedTopic){
