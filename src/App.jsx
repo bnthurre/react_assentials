@@ -6,7 +6,7 @@ import TabButtons from "./components/TabButton";
 import { EXAMPLES } from "./data";
 import React from "react";
 function App() {
-  const [selectedTopic, setSelectedTopic] = useState("props");
+  const [selectedTopic, setSelectedTopic] = useState();
 
   const handleselect = (selectedItem) => {
     setSelectedTopic(selectedItem);
@@ -49,13 +49,27 @@ function App() {
               label="State"
             ></TabButtons>
           </menu>
-          <div id="tab-content">
-            <h3>{EXAMPLES[selectedTopic].title}</h3>
-            <p>{EXAMPLES[selectedTopic].description}</p>
-            <pre>
-              <code>{EXAMPLES[selectedTopic].code}</code>
-            </pre>
-          </div>
+          {!selectedTopic && <p>please select a topic!</p> }
+          {selectedTopic && (
+            <div id="tab-content">
+              <h3>{EXAMPLES[selectedTopic].title}</h3>
+              <p>{EXAMPLES[selectedTopic].description}</p>
+              <pre>
+                <code>{EXAMPLES[selectedTopic].code}</code>
+              </pre>
+            </div>
+          ) }
+          {/* alternative way */}
+          {/* {!selectedTopic ? <p>please select a topic!</p> : null}
+          {selectedTopic ? (
+            <div id="tab-content">
+              <h3>{EXAMPLES[selectedTopic].title}</h3>
+              <p>{EXAMPLES[selectedTopic].description}</p>
+              <pre>
+                <code>{EXAMPLES[selectedTopic].code}</code>
+              </pre>
+            </div>
+          ) : null} */}
         </section>
       </main>
     </div>
@@ -63,3 +77,18 @@ function App() {
 }
 
 export default App;
+
+
+// let tabcontent = <p>please select a topic!</p>;
+// if (selectedTopic){
+//   tabcontent= {
+//     <div id="tab-content">
+//               <h3>{EXAMPLES[selectedTopic].title}</h3>
+//               <p>{EXAMPLES[selectedTopic].description}</p>
+//               <pre>
+//                 <code>{EXAMPLES[selectedTopic].code}</code>
+//               </pre>
+//             </div>
+
+//   }
+// }
